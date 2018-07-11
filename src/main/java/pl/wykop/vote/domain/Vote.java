@@ -39,8 +39,8 @@ public class Vote {
         return author;
     }
 
-    public int applyToScore(int score) {
-        return score + scoreToApply;
+    public int scoreToApply() {
+        return scoreToApply;
     }
 
     public String activityUid() {

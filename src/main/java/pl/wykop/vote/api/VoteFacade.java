@@ -26,7 +26,7 @@ public class VoteFacade {
                 .orElseGet(() -> voteRepository.createVoteFor(voteCommand.getActivityUid(), voteCommand.getUsername()));
 
         vote.setTo(Vote.Type.valueOf(voteCommand.getType().name()));
-        article.applyVote(vote);
+        article.applyVote(vote.scoreToApply());
 
         articleRepository.store(article);
         voteRepository.store(vote);

@@ -18,8 +18,8 @@ public class Article implements Activity, Voteable {
     }
 
     @Override
-    public void applyVote(Vote vote) {
-        this.score = vote.applyToScore(this.score);
+    public void applyVote(int scoreToApply) {
+        this.score += scoreToApply;
     }
 
     @Override

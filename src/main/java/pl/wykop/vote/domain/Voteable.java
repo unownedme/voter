@@ -2,7 +2,7 @@ package pl.wykop.vote.domain;
 
 interface Voteable {
 
-    void applyVote(Vote vote);
+    void applyVote(int vote);
 
     int score();
 }
